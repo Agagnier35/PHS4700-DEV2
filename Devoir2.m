@@ -8,17 +8,18 @@ tf = 0;
 %--------------Iterations de la simulation-----------
 while(simluationNonTermine(table, filet, balle))%TODO
     balle.sommeForce = [0 0 0];
-    appliquerGravite(balle);%TODO
+    tf = tf + deltaTemps;
+    appliquerGravite(balle);
     if(option > 1)
-        appliquerVisqueux(balle);%TODO
+        appliquerVisqueux(balle);
         if(option > 2)
             appliquerMagnus(balle);%TODO
         end
     end
     calculerNouvelleAcceleration(balle);%TODO
-    calculerNouvelleVitesse(balle);%TODO
+    calculerNouvellesVitesses(balle);%TODO
     calculerNouvellePosition(balle);%TODO
-    tf = tf + deltaTemps;
+
 end
 
 rbf = balle.position;
