@@ -24,13 +24,13 @@ classdef Balle < Objet & handle
         end
         
         function v = getNormeVitesse(b)
-            v = normc(b.vitesse);
+            v = norm(b.vitesse);
             if( v > b.vMax)
               v = b.vMax;
             end
         end
         function vang = getNormeVitesseAngulaire(b)
-            vang = normc(b.vitesse);
+            vang = norm(b.vitesse);
             if( vang > b.wMax)
               vang = b.wMax;
             end
